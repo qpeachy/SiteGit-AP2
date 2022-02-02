@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html class= "no-js" lang="en">
+
+<!doctype html>
+<html class="no-js" lang="">
 
 <head>
   <meta charset="utf-8">
-  <title>Commandes GIT</title>
+  <title>GIT</title>
   <meta name="description" content="Introduction au commande GIT, en quelques étapes vous saurez l'utiliser">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,8 +14,8 @@
   <meta property="og:image" content="">
 
   <link rel="manifest" href="site.webmanifest">
-  <link rel="icon" href="icon.png" type="image/png" />
-  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="icon" href="lili.png" type="image/png" />
+  <link rel="shortcut icon" href="lili.png" />
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
@@ -26,38 +27,106 @@
 </head>
 
 <body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  <div class="container-fluid">
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+		  <a class="navbar-brand" href="index.html">Home</a>
+		  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			 <li class="nav-item dropdown">
+			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				GIT
+			  </a>
+			  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="CommandeGit.html">Documentation</a></li>
+			  <li><hr class="dropdown-divider"></li>
+			  <li><a class="dropdown-item" href="https://github.com/qpeachy">GitHub</a></li>
+			  </ul>
+			</li>		
+			<li class="nav-item dropdown">
+			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				GitLab
+			  </a>
+			  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="GitLab.html">Documentation</a></li>
+			  <li><hr class="dropdown-divider"></li>
+			  <li><a class="dropdown-item" href="https://about.gitlab.com/">GitLab</a></li>
+			  </ul>
+			</li>
+		  </ul>
+		</div>
+	  </div>
+	</nav>
+	
+	<main role="main" class="container">	
+        <div class="title text-center" id='p1'>
+			<img src="gitcmd.png" class="img-fluid img-thumbnail w-50">
+			<h1></br>Commande Git</br></h1>
+            <p class="lead h3"> Nous allons voir les commandes Git indispensable que vous devez connaître pour faire de vous de bon developpeurs</p></br>
+		</div>
+	 </main>
+	<div class="lead text-center h5">
+		<table class="table">
+		  <thead>
+			<tr>
+			  <th scope="col">#</th>
+			  <th scope="col">Explications</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr>
+			  <th scope="row">git init</th>
+			  <td>Permet la création d'un dépot git local en créant dans le repertoire un fichier .git lié   à un serveur ou dépôt git</td>  
+			</tr>
+			<tr>
+			  <th scope="row">git clone <url du dépot> </th>
+			  <td>Permet de copier un dépôt remote pour crée un local lié à ce remote</td>  
+			</tr>
+			<tr>
+			  <th scope="row">git remote add <nom_du_remote (origin ou autre)> <lien_du_serveur></th>
+			  <td>Permet de lié votre repo local a votre repo remote</td>  
+			</tr>
+			<tr>
+			  <th scope="row">git status</th>
+			  <td>Permet de connaître l'état courant de vos copies local(les modifications ont-elles été commitées, les fichiers ajoutés, les commit pushé). Les interface graphiques vous l'indique souvent par des couleurs et icones</td>  
+			</tr>
+			<tr>
+			  <th scope="row">git add <nom du fichier> </th>
+			  <td>Permet lorsque vous créez un fichier dans votre version de travail, il faut l'integré grâce à cette  (.* ex:"git add .txt" permet d'ajouter tous les fichier d'un certain type)</td>
+			</tr>
+			<tr>
+			  <th scope="row">git commit -m "Message du commit"</th>
+			  <td>Permet de déposer les modifications de la verion de travail sur la version locale. Il est obligatoire d'accompagner cette commande d'un message, il indique le contenue des modifications</td>  
+			</tr>
+			<tr>
+			  <th scope="row">git push</th>
+			  <td>Permet de "pousser" la branche actuelle du local vers le remote. Git applique alors successivement tous les commit au remote (ATTENTION: il est recommandé de faire un git commit avant d'effectuer cette commande)</td>  
+			</tr>
+			<tr>
+			  <th scope="row">merge <branche></th>
+			  <td>Permet de fusionner deux éléments: on ajoute les modifications de l'un à l'autre. L'opération est, dans la plupart des cas, transparente. 
+			  Mais des conflits peuvent apparaître: deux modifications sont incompatibles(usuellement: on a touché à la même ligne de code), il faut alors résoude le conflit : choisir/écrire à la main la version que l'on veut garder pour chaque conflit</td>  
+			</tr>
+			<tr>
+			  <th scope="row">git rm <nom du fichier></th>
+			  <td>Permet de supprimer les fichiers du working tree et de l’index</td>  
+			</tr>
+		  </tbody>
+		</table>
+	</div>
 
-<nav class="navbar bg-dark navbar-dark">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">HOME</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="CommandeGit.html">Commande Git</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/qpeachy">GitHub</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://about.gitlab.com/">GitLab</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
 
-
-
-<div class="text-center">
-  <h1>Tableau des commandes de base GIT</h1>
-  <img src="img/index.png" class="img-thumbnail" alt="">
-
-</div>
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
 </body>
-
 </html>
-
-
