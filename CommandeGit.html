@@ -40,35 +40,29 @@
 				GIT
 			  </a>
 			  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-			  <li><a class="dropdown-item" href="CommandeGit.html">Documentation</a></li>
-			  <li><hr class="dropdown-divider"></li>
-			  <li><a class="dropdown-item" href="https://github.com/qpeachy">GitHub</a></li>
-			  </ul>
-			</li>		
-			<li class="nav-item dropdown">
-			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-				GitLab
-			  </a>
-			  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-			  <li><a class="dropdown-item" href="GitLab.html">Documentation</a></li>
-			  <li><hr class="dropdown-divider"></li>
-			  <li><a class="dropdown-item" href="https://about.gitlab.com/">GitLab</a></li>
+          <li><a class="dropdown-item" href="CommandeGit.html">Documentation Git</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="https://github.com/qpeachy" target="_blank">GitHub</a></li>
+          <li><a class="dropdown-item" href="https://about.gitlab.com/" target="_blank">GitLab</a></li>
 			  </ul>
 			</li>
 		  </ul>
 		</div>
 	  </div>
 	</nav>
-	
-	<main role="main" class="container">	
-        <div class="title text-center" id='p1'>
-			<img src="gitcmd.png" class="img-fluid img-thumbnail w-50">
-			<h1></br>Commande Git</br></h1>
-            <p class="lead h3"> Nous allons voir les commandes Git indispensable que vous devez connaître pour faire de vous de bon developpeurs</p></br>
+
+	<main role="main" class="container">
+		<div
+		  class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
+		  style="background-image: url('gitcmd.png');">
+		  <h1 class="mb-3 h1">GIT</h1>
 		</div>
 	 </main>
-	<div class="lead text-center h5">
-		<table class="table">
+
+	 <p class="lead fs-4 fw-bold"> Nous allons voir les commandes Git indispensable que vous devez connaître pour faire de vous de bon developpeurs :</p>
+
+	<div class="row fs-5 text-center "><div class="col-10">
+		<table class="table table-bordered border-dark">
 		  <thead>
 			<tr>
 			  <th scope="col">#</th>
@@ -78,19 +72,27 @@
 		  <tbody>
 			<tr>
 			  <th scope="row">git init</th>
-			  <td>Permet la création d'un dépot git local en créant dans le repertoire un fichier .git lié   à un serveur ou dépôt git</td>  
+			  <td>Permet la création d'un dépot git local en créant dans le repertoire un fichier .git lié   à un serveur ou dépôt git.</td>
 			</tr>
 			<tr>
 			  <th scope="row">git clone <url du dépot> </th>
-			  <td>Permet de copier un dépôt remote pour crée un local lié à ce remote</td>  
+			  <td>Permet de copier un dépôt remote pour crée un local lié à ce remote.</td>
+			</tr>
+			<tr>
+			  <th scope="row">git config </th>
+			  <td>Permet de définir des valeurs de configuration Git au niveau global ou local d'un projet. Le cas d'usage le plus élémentaire pour git config consiste à l'appeler avec un nom de configuration, qui affichera la valeur définie à ce nom.</td>
+			</tr>
+			<tr>
+			  <th scope="row">git alias</th>
+			  <td>Le terme « alias » est synonyme de raccourci. La création d'alias est un schéma courant dans d'autres utilitaires populaires comme le shell Bash. Les alias permettent de créer des commandes plus courtes, qui sont mappées à celles plus longues.(ex: 'git config --global alias.co checkout' [alias] co = checkout)</td>
 			</tr>
 			<tr>
 			  <th scope="row">git remote add <nom_du_remote (origin ou autre)> <lien_du_serveur></th>
-			  <td>Permet de lié votre repo local a votre repo remote</td>  
+			  <td>Permet de lié votre repo local a votre repo remote</td>
 			</tr>
 			<tr>
 			  <th scope="row">git status</th>
-			  <td>Permet de connaître l'état courant de vos copies local(les modifications ont-elles été commitées, les fichiers ajoutés, les commit pushé). Les interface graphiques vous l'indique souvent par des couleurs et icones</td>  
+			  <td>Permet de connaître l'état courant de vos copies local(les modifications ont-elles été commitées, les fichiers ajoutés, les commit pushé). Les interface graphiques vous l'indique souvent par des couleurs et icones</td>
 			</tr>
 			<tr>
 			  <th scope="row">git add <nom du fichier> </th>
@@ -98,24 +100,68 @@
 			</tr>
 			<tr>
 			  <th scope="row">git commit -m "Message du commit"</th>
-			  <td>Permet de déposer les modifications de la verion de travail sur la version locale. Il est obligatoire d'accompagner cette commande d'un message, il indique le contenue des modifications</td>  
+			  <td>Permet de déposer les modifications de la verion de travail sur la version locale. Il est obligatoire d'accompagner cette commande d'un message, il indique le contenue des modifications</td>
 			</tr>
 			<tr>
 			  <th scope="row">git push</th>
-			  <td>Permet de "pousser" la branche actuelle du local vers le remote. Git applique alors successivement tous les commit au remote (ATTENTION: il est recommandé de faire un git commit avant d'effectuer cette commande)</td>  
+			  <td>Permet de "pousser" la branche actuelle du local vers le remote. Git applique alors successivement tous les commit au remote (ATTENTION: il est recommandé de faire un git commit avant d'effectuer cette commande)</td>
 			</tr>
 			<tr>
-			  <th scope="row">merge <branche></th>
-			  <td>Permet de fusionner deux éléments: on ajoute les modifications de l'un à l'autre. L'opération est, dans la plupart des cas, transparente. 
-			  Mais des conflits peuvent apparaître: deux modifications sont incompatibles(usuellement: on a touché à la même ligne de code), il faut alors résoude le conflit : choisir/écrire à la main la version que l'on veut garder pour chaque conflit</td>  
+			  <th scope="row">git pull</th>
+			  <td>Permet de faire un fetch du contenu d'un dépôt distant et pour le télécharger, puis pour mettre à jour immédiatement le dépôt local qui correspond à ce contenu. ... La commande git pull est en fait la combinaison de deux autres commandes, git fetch suivie de git merge .</td>
+			</tr>
+			<tr>
+			  <th scope="row">git merge<branche></th>
+			  <td>Permet de fusionner deux éléments: on ajoute les modifications de l'un à l'autre. L'opération est, dans la plupart des cas, transparente.
+			  Mais des conflits peuvent apparaître: deux modifications sont incompatibles(usuellement: on a touché à la même ligne de code), il faut alors résoude le conflit : choisir/écrire à la main la version que l'on veut garder pour chaque conflit</td>
+			</tr>
+			<tr>
+			  <th scope="row">git branch</th>
+			  <td>Permet de répertorier toutes les branches de votre dépôt. Cette commande est synonyme de git branch --list. en ajoutant <nom branche> à la commande cela permet de créer une branche</td>
+			</tr>
+			<tr>
+			  <th scope="row">git checkout</th>
+			  <td>Permet de basculer entre les branches créées au moyen de git branch.</td>
+			</tr>
+			<tr>
+			  <th scope="row">git reset</th>
+			  <td>Permet de supprimer les fichiers du working tree et de l’index</td>
+			</tr>
+			<tr>
+			  <th scope="row">git fetch <remote></th>
+			  <td>La commande git reset est un outil complexe et polyvalent pour annuler les changements. Elle peut être appelée de trois façons, qui correspondent aux arguments de ligne de commande --soft, --mixed et --hard. Ces trois arguments correspondent chacun aux trois mécanismes de gestion des états internes de Git, l'arborescence des commits (HEAD), l'index de staging et le répertoire de travail.</td>
 			</tr>
 			<tr>
 			  <th scope="row">git rm <nom du fichier></th>
-			  <td>Permet de supprimer les fichiers du working tree et de l’index</td>  
+			  <td>Permet de supprimer les fichiers du working tree et de l’index</td>
 			</tr>
 		  </tbody>
 		</table>
+	</div></div>
+
+	<div><p class="fs-5">Il ne s'agit que de commandes de base introduisantes à git. Toutes les commandes et leurs dérivées se trouve sur la <a href="http://git-scm.com/book/fr/v2">doc Git</a></p></div>
+
+	</br><div class="row">
+		<p class= "lead fs-4 fw-bold"> Nous allons maintenant voir les différentes étapes à la création un token sur Github :</p>
+		<p class="fs-5">Qu'est-ce qu'un token? n token est un actif numérique émis et échangeable sur une blockchain ( la blockchain est un grand livre partagé et inaltérable qui facilite le processus d'enregistrement des transactions et de suivi des actifs dans un réseau commercial). </p>
+		<div class="row">
+			<p class="fs-5 text-decoration-underline">1- Se diriger vers la page de création de token depuis la barre de menu déroulé sous l'image utilisateur ('Settings/Developer settings'), selectionner 'Personnal access tokens'
+			</p>
+				<img src="Token1.png" class="rounded float-start w-50" alt="..."></br>
+		</div>
+		<div class="row">
+			<p class="fs-5 text-decoration-underline">2- Indiquer pourquoi ce token sera créé, une date d'expiration, selectionner toutes les cases et selectionner 'Generate token'
+			</p>
+				<img src="Token2.1.png" class="rounded float-start w-50" alt="...">
+				<img src="Token2.2.png" class="rounded float-end w-50" alt="..."></br>
+		</div>
+		<div class="row">
+			<p class="fs-5 text-decoration-underline">3- Une fois le token créé copier le et sauvegarder le quelque part car il ne sera plus visible par la suite
+			</p>
+			<img src="Token3.png" class="rounded float-start w-50" alt="..."></br>
+		</div>
 	</div>
+
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
