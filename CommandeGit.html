@@ -39,12 +39,12 @@
 			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 				GIT
 			  </a>
-			  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="CommandeGit.html">Documentation Git</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="https://github.com/qpeachy" target="_blank">GitHub</a></li>
-          <li><a class="dropdown-item" href="https://about.gitlab.com/" target="_blank">GitLab</a></li>
-			  </ul>
+         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+           <li><a class="dropdown-item" href="CommandeGit.html">Documentation</a></li>
+           <li><hr class="dropdown-divider"></li>
+           <li><a class="dropdown-item" href="indexhub.html">GitHub Menu</a></li>
+           <li><a class="dropdown-item" href="https://github.com/qpeachy" target="_blank">GitHub</a></li>
+         </ul>
 			</li>
 		  </ul>
 		</div>
@@ -54,7 +54,7 @@
 	<main role="main" class="container">
 		<div
 		  class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
-		  style="background-image: url('gitcmd.png');">
+		  style="background-image: url('img/gitcmd.PNG');">
 		  <h1 class="mb-3 h1">GIT</h1>
 		</div>
 	 </main>
@@ -84,27 +84,27 @@
 			</tr>
 			<tr>
 			  <th scope="row">git alias</th>
-			  <td>Le terme « alias » est synonyme de raccourci. La création d'alias est un schéma courant dans d'autres utilitaires populaires comme le shell Bash. Les alias permettent de créer des commandes plus courtes, qui sont mappées à celles plus longues.(ex: 'git config --global alias.co checkout' [alias] co = checkout)<br><img src="cmdalias1.png" class="rounded w-50 float-start" alt="..."><img src="cmdalias2.png" class="rounded w-60 float-end" alt="..."></td>
+			  <td>Le terme « alias » est synonyme de raccourci. La création d'alias est un schéma courant dans d'autres utilitaires populaires comme le shell Bash. Les alias permettent de créer des commandes plus courtes, qui sont mappées à celles plus longues.(ex: 'git config --global alias.co checkout' [alias] co = checkout)<br><img src="img/cmdalias1.PNG" class="rounded w-50 float-start" alt="..."><img src="img/cmdalias2.PNG" class="rounded w-60 float-end" alt="..."></td>
 			</tr>
 			<tr>
 			  <th scope="row">git remote add 'nom_du_remote (origin ou autre)' 'lien_du_serveur' </th>
-			  <td>Permet de lié votre repo local a votre repo remote<br><img src="cmdremote.png" class="rounded w-50" alt="..."></td>
+			  <td>Permet de lié votre repo local a votre repo remote<br><img src="img/cmdremote.PNG" class="rounded w-50" alt="..."></td>
 			</tr>
 			<tr>
 			  <th scope="row">git status</th>
-			  <td>Permet de connaître l'état courant de vos copies local(les modifications ont-elles été commitées, les fichiers ajoutés, les commit pushé). Les interface graphiques vous l'indique souvent par des couleurs et icones <br><img src="cmdstatus.png" class="rounded w-50" alt="..."></td>
+			  <td>Permet de connaître l'état courant de vos copies local(les modifications ont-elles été commitées, les fichiers ajoutés, les commit pushé). Les interface graphiques vous l'indique souvent par des couleurs et icones <br><img src="img/cmdstatus.png" class="rounded w-50" alt="..."></td>
 			</tr>
 			<tr>
 			  <th scope="row">git add 'nom du fichier' </th>
-			  <td>Permet lorsque vous créez un fichier dans votre version de travail, il faut l'integré grâce à cette  (.* ex:"git add .txt" permet d'ajouter tous les fichier d'un certain type)<br><img src="cmdadd.png" class="rounded w-50" alt="..."></td>
+			  <td>Permet lorsque vous créez un fichier dans votre version de travail, il faut l'integré grâce à cette  (.* ex:"git add .txt" permet d'ajouter tous les fichier d'un certain type)<br><img src="img/cmdadd.png" class="rounded w-50" alt="..."></td>
 			</tr>
 			<tr>
 			  <th scope="row">git commit -m "Message du commit"</th>
-			  <td>Permet de déposer les modifications de la verion de travail sur la version locale. Il est obligatoire d'accompagner cette commande d'un message, il indique le contenue des modifications <br><img src="cmdcomm.png" class="rounded w-50" alt="..."></td>
+			  <td>Permet de déposer les modifications de la verion de travail sur la version locale. Il est obligatoire d'accompagner cette commande d'un message, il indique le contenue des modifications <br><img src="img/cmdcomm.PNG" class="rounded w-50" alt="..."></td>
 			</tr>
 			<tr>
 			  <th scope="row">git push</th>
-			  <td>Permet de "pousser" la branche actuelle du local vers le remote. Git applique alors successivement tous les commit au remote (ATTENTION: il est recommandé de faire un git commit avant d'effectuer cette commande)<br><img src="cmdpush.png" class="rounded w-50" alt="..."></td>
+			  <td>Permet de "pousser" la branche actuelle du local vers le remote. Git applique alors successivement tous les commit au remote (ATTENTION: il est recommandé de faire un git commit avant d'effectuer cette commande)<br><img src="img/cmdpush.PNG" class="rounded w-50" alt="..."></td>
 			</tr>
 			<tr>
 			  <th scope="row">git pull</th>
@@ -147,18 +147,18 @@
 		<div class="row">
 			<p class="fs-5 text-decoration-underline">1- Se diriger vers la page de création de token depuis la barre de menu déroulé sous l'image utilisateur ('Settings/Developer settings'), selectionner 'Personnal access tokens'
 			</p>
-				<img src="Token1.png" class="rounded float-start w-50" alt="..."></br>
+				<img src="img/Token1.PNG" class="rounded float-start w-50" alt="..."></br>
 		</div>
 		<div class="row">
 			<p class="fs-5 text-decoration-underline">2- Indiquer pourquoi ce token sera créé, une date d'expiration, selectionner toutes les cases et selectionner 'Generate token'
 			</p>
-				<img src="Token2.1.png" class="rounded float-start w-50" alt="...">
-				<img src="Token2.2.png" class="rounded float-end w-50" alt="..."></br>
+				<img src="img/Token2.1.PNG" class="rounded float-start w-50" alt="...">
+				<img src="img/Token2.2.PNG" class="rounded float-end w-50" alt="..."></br>
 		</div>
 		<div class="row">
 			<p class="fs-5 text-decoration-underline">3- Une fois le token créé copier le et sauvegarder le quelque part car il ne sera plus visible par la suite
 			</p>
-			<img src="Token3.png" class="rounded float-start w-50" alt="..."></br>
+			<img src="img/Token3.PNG" class="rounded float-start w-50" alt="..."></br>
 		</div>
 	</div>
 
