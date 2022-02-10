@@ -75,7 +75,7 @@
 			  <td>Permet la création d'un dépot git local en créant dans le repertoire un fichier .git lié   à un serveur ou dépôt git.</td>
 			</tr>
 			<tr>
-			  <th scope="row">git clone <url du dépot> </th>
+			  <th scope="row">git clone 'url du dépot' </th>
 			  <td>Permet de copier un dépôt remote pour crée un local lié à ce remote.</td>
 			</tr>
 			<tr>
@@ -84,40 +84,40 @@
 			</tr>
 			<tr>
 			  <th scope="row">git alias</th>
-			  <td>Le terme « alias » est synonyme de raccourci. La création d'alias est un schéma courant dans d'autres utilitaires populaires comme le shell Bash. Les alias permettent de créer des commandes plus courtes, qui sont mappées à celles plus longues.(ex: 'git config --global alias.co checkout' [alias] co = checkout)</td>
+			  <td>Le terme « alias » est synonyme de raccourci. La création d'alias est un schéma courant dans d'autres utilitaires populaires comme le shell Bash. Les alias permettent de créer des commandes plus courtes, qui sont mappées à celles plus longues.(ex: 'git config --global alias.co checkout' [alias] co = checkout)<br><img src="cmdalias1.png" class="rounded w-50 float-start" alt="..."><img src="cmdalias2.png" class="rounded w-60 float-end" alt="..."></td>
 			</tr>
 			<tr>
-			  <th scope="row">git remote add <nom_du_remote (origin ou autre)> <lien_du_serveur></th>
-			  <td>Permet de lié votre repo local a votre repo remote</td>
+			  <th scope="row">git remote add 'nom_du_remote (origin ou autre)' 'lien_du_serveur' </th>
+			  <td>Permet de lié votre repo local a votre repo remote<br><img src="cmdremote.png" class="rounded w-50" alt="..."></td>
 			</tr>
 			<tr>
 			  <th scope="row">git status</th>
-			  <td>Permet de connaître l'état courant de vos copies local(les modifications ont-elles été commitées, les fichiers ajoutés, les commit pushé). Les interface graphiques vous l'indique souvent par des couleurs et icones</td>
+			  <td>Permet de connaître l'état courant de vos copies local(les modifications ont-elles été commitées, les fichiers ajoutés, les commit pushé). Les interface graphiques vous l'indique souvent par des couleurs et icones <br><img src="cmdstatus.png" class="rounded w-50" alt="..."></td>
 			</tr>
 			<tr>
-			  <th scope="row">git add <nom du fichier> </th>
-			  <td>Permet lorsque vous créez un fichier dans votre version de travail, il faut l'integré grâce à cette  (.* ex:"git add .txt" permet d'ajouter tous les fichier d'un certain type)</td>
+			  <th scope="row">git add 'nom du fichier' </th>
+			  <td>Permet lorsque vous créez un fichier dans votre version de travail, il faut l'integré grâce à cette  (.* ex:"git add .txt" permet d'ajouter tous les fichier d'un certain type)<br><img src="cmdadd.png" class="rounded w-50" alt="..."></td>
 			</tr>
 			<tr>
 			  <th scope="row">git commit -m "Message du commit"</th>
-			  <td>Permet de déposer les modifications de la verion de travail sur la version locale. Il est obligatoire d'accompagner cette commande d'un message, il indique le contenue des modifications</td>
+			  <td>Permet de déposer les modifications de la verion de travail sur la version locale. Il est obligatoire d'accompagner cette commande d'un message, il indique le contenue des modifications <br><img src="cmdcomm.png" class="rounded w-50" alt="..."></td>
 			</tr>
 			<tr>
 			  <th scope="row">git push</th>
-			  <td>Permet de "pousser" la branche actuelle du local vers le remote. Git applique alors successivement tous les commit au remote (ATTENTION: il est recommandé de faire un git commit avant d'effectuer cette commande)</td>
+			  <td>Permet de "pousser" la branche actuelle du local vers le remote. Git applique alors successivement tous les commit au remote (ATTENTION: il est recommandé de faire un git commit avant d'effectuer cette commande)<br><img src="cmdpush.png" class="rounded w-50" alt="..."></td>
 			</tr>
 			<tr>
 			  <th scope="row">git pull</th>
 			  <td>Permet de faire un fetch du contenu d'un dépôt distant et pour le télécharger, puis pour mettre à jour immédiatement le dépôt local qui correspond à ce contenu. ... La commande git pull est en fait la combinaison de deux autres commandes, git fetch suivie de git merge .</td>
 			</tr>
 			<tr>
-			  <th scope="row">git merge<branche></th>
+			  <th scope="row">git merge 'branche' </th>
 			  <td>Permet de fusionner deux éléments: on ajoute les modifications de l'un à l'autre. L'opération est, dans la plupart des cas, transparente.
 			  Mais des conflits peuvent apparaître: deux modifications sont incompatibles(usuellement: on a touché à la même ligne de code), il faut alors résoude le conflit : choisir/écrire à la main la version que l'on veut garder pour chaque conflit</td>
 			</tr>
 			<tr>
 			  <th scope="row">git branch</th>
-			  <td>Permet de répertorier toutes les branches de votre dépôt. Cette commande est synonyme de git branch --list. en ajoutant <nom branche> à la commande cela permet de créer une branche</td>
+			  <td>Permet de répertorier toutes les branches de votre dépôt. Cette commande est synonyme de git branch --list. en ajoutant 'nom branche' à la commande cela permet de créer une branche</td>
 			</tr>
 			<tr>
 			  <th scope="row">git checkout</th>
@@ -125,14 +125,14 @@
 			</tr>
 			<tr>
 			  <th scope="row">git reset</th>
-			  <td>Permet de supprimer les fichiers du working tree et de l’index</td>
+			  <td>Elle peut être appelée de trois façons, qui correspondent aux arguments de ligne de commande --soft, --mixed et --hard. Ces trois arguments correspondent chacun aux trois mécanismes de gestion des états internes de Git, l'arborescence des commits (HEAD), l'index de staging et le répertoire de travail.</td>
 			</tr>
 			<tr>
-			  <th scope="row">git fetch <remote></th>
+			  <th scope="row">git fetch 'remote' </th>
 			  <td>La commande git reset est un outil complexe et polyvalent pour annuler les changements. Elle peut être appelée de trois façons, qui correspondent aux arguments de ligne de commande --soft, --mixed et --hard. Ces trois arguments correspondent chacun aux trois mécanismes de gestion des états internes de Git, l'arborescence des commits (HEAD), l'index de staging et le répertoire de travail.</td>
 			</tr>
 			<tr>
-			  <th scope="row">git rm <nom du fichier></th>
+			  <th scope="row">git rm 'nom du fichier' </th>
 			  <td>Permet de supprimer les fichiers du working tree et de l’index</td>
 			</tr>
 		  </tbody>
